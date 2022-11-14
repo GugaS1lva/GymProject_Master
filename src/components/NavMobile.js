@@ -2,7 +2,7 @@ import React from 'react';
 
 import { nav } from '../data'
 
-const NavMobile = ({ navMobile }) => {
+const NavMobile = ({ navMobile, closeMobileNav }) => {
   return (
     <nav
       className={`${navMobile ? 'min-h-screen' : 'min-h-0'} lg:hidden w-full bg-neutral-500 fixed top-0 left-0 right-0 -bottom-12 -z-10 overflow-hidden transition-all h-0`}
@@ -12,6 +12,7 @@ const NavMobile = ({ navMobile }) => {
           return (
             <li key={index}>
               <a
+                onClick={() => { closeMobileNav(!navMobile) }}
                 className='text-white text-body-md hover:text-primary-200 transition scroll-smooth'
                 href={item.href}
               >{item.name}</a>

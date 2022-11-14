@@ -48,7 +48,7 @@ const Header = () => {
         }
       </div>
 
-      <NavMobile navMobile={navMobile} />
+      <NavMobile navMobile={navMobile} closeMobileNav={setNavMobile} />
     </header>
   );
 };
